@@ -10,3 +10,6 @@ class Like(models.Model):
   game = models.CharField()
   thumbnail = models.CharField()
   duration = models.IntegerField()
+
+  def __str__(self):
+    return self.slug
