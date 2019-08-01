@@ -1,7 +1,7 @@
 from django.db import models
 
 class Like(models.Model):
-  slug = models.CharField(max_length=100)
+  slug = models.CharField(max_length=100, unique=True)
   tracking_id = models.IntegerField()
   url = models.CharField(max_length=500)
   embed_url = models.CharField(max_length=500)
@@ -9,7 +9,7 @@ class Like(models.Model):
   title = models.CharField(max_length=500)
   game = models.CharField(max_length=500)
   thumbnail = models.CharField(max_length=500)
-  duration = models.IntegerField()
+  duration = models.CharField(max_length=20)
   created_at = models.DateTimeField(auto_now_add=True)
 
   def __str__(self):
