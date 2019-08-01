@@ -10,7 +10,7 @@ class Like(models.Model):
   game = models.CharField(max_length=500)
   thumbnail = models.CharField(max_length=500)
   duration = models.IntegerField()
-  created_at =models.DateTimeField(auto_now_add=True)
+  created_at = models.DateTimeField(auto_now_add=True)
 
   def __str__(self):
     return self.slug
